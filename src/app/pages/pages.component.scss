@@ -14,3 +14,21 @@
         margin-left: 0px !important;
     }
 }
+
+.transparent-left-btn {
+    position: fixed;
+    top: 18px;
+    z-index: 99;
+}
+
+.transparent-right-btn {
+    position: fixed;
+    top: 18px;
+    z-index: 99;
+    right: 40px;
+}
+
+.transparent-btn{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30%;
+}

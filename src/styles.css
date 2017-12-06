@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+.navbar-collapse {
+    margin: 0 80px;
+}
+
+.mini-sidebar.fix-sidebar .left-sidebar {
+    position: fixed!important;
+}

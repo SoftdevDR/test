@@ -38,14 +38,14 @@ export class SidebarComponent implements AfterViewInit {
                     $(".scroll-sidebar, .slimScrollDiv").css("overflow", "hidden").parent().css("overflow", "visible");
                     $("body").removeClass("mini-sidebar");
                     $('.navbar-brand span').show();
-                    //$(".sidebartoggler i").addClass("ti-menu");
+                    $(".sidebartoggler i").removeClass("icon-arrow-right");
                 }
                 else {
                     $("body").trigger("resize");
                     $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
                     $("body").addClass("mini-sidebar");
                     $('.navbar-brand span').hide();
-                    //$(".sidebartoggler i").removeClass("ti-menu");
+                    $(".sidebartoggler i").addClass("icon-arrow-right");
                 }
             });
 

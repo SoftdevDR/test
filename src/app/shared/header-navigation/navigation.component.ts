@@ -8,9 +8,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class NavigationComponent implements AfterViewInit {
 	name:string;
   	showHide:boolean;
-  
+    upDown: boolean;
   	constructor() {
-    	this.showHide = true;
+        this.showHide = true;
+        this.upDown = true;
   	}
   
   	changeShowStatus(){
@@ -18,12 +19,13 @@ export class NavigationComponent implements AfterViewInit {
   	}
     
     ngAfterViewInit() {
-
+        const _this = this;
         $(function () {
             $(".preloader").fadeOut();
         });
 
         var set = function () {
+            
             var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
             var topOffset = 70;
             if (width < 1170) {
@@ -45,6 +47,24 @@ export class NavigationComponent implements AfterViewInit {
             }
 
         };
+
+        $(".transparent-right-btn").on('click', function () {
+            
+            if(_this.upDown == true){
+                $(".topbar").css("display", "none");
+                $(".transparent-right-btn a i").removeClass("icon-arrow-up").addClass("icon-arrow-down");
+                $(".transparent-right-btn, .transparent-left-btn").addClass("transparent-btn");
+                $(".left-sidebar").css("padding-top", "0");
+                _this.upDown = false;
+            } else {
+                $(".topbar").css("display", "block");
+                $(".transparent-right-btn a i").removeClass("transparent-btn").addClass("icon-arrow-up");
+                $(".transparent-right-btn, .transparent-left-btn").removeClass("transparent-btn");
+                $(".left-sidebar").css("padding-top", "70px");
+                _this.upDown = true;
+            }
+        });
+
         $(window).ready(set);
         $(window).on("resize", set);
 
