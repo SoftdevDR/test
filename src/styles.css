@@ -7,3 +7,20 @@
 .mini-sidebar.fix-sidebar .left-sidebar {
     position: fixed!important;
 }
+
+.navbar-collapse-mobile {
+    margin: 0 50px;
+}
+
+@media screen and (max-width: 1170px) {
+    a.nav-link.sidebartoggler.text-muted.waves-effect.waves-dark {
+        margin-left: 100px;
+    }
+}
+.mini-sidebar a.nav-link.sidebartoggler.text-muted.waves-effect.waves-dark {
+    margin-left: 15px;
+}
+.transparent-btn
+a.nav-link.sidebartoggler.text-muted.waves-effect.waves-dark{
+    margin-left: 0px;
+}

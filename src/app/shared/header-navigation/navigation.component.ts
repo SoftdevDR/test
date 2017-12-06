@@ -32,7 +32,7 @@ export class NavigationComponent implements AfterViewInit {
                 $("body").addClass("mini-sidebar");
                 $('.navbar-brand span').hide();
                 $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
-                $(".sidebartoggler i").addClass("ti-menu");
+                $(".navbar-collapse").addClass("navbar-collapse-mobile");
             } else {
                 $("body").removeClass("mini-sidebar");
                 $('.navbar-brand span').show();

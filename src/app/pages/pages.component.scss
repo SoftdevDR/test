@@ -13,6 +13,13 @@
     .main-container {
         margin-left: 0px !important;
     }
+    
+}
+
+@media screen and (max-width: 1170px) {
+    .transparent-right-btn {
+        right: 20px!important;
+    }
 }
 
 .transparent-left-btn {
@@ -32,3 +39,4 @@
     background: rgba(0, 0, 0, 0.2);
     border-radius: 30%;
 }
+
